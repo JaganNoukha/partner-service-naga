@@ -52,7 +52,7 @@ async function bootstrap() {
 
 
   logger.log('🚀 NestJS App Started...');
-  const APP_PORT = process.env.PORT;
+  const APP_PORT = process.env.PORT ?? 3000;
   await app.listen(APP_PORT, () => {
     logger.log(`✅ Server is running on http://localhost:${APP_PORT}`);
   });
